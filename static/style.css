@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+/* HERO */
+.hero {
+    padding: 120px 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 20px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 15px;
+    width: 260px;
+    transition: 0.4s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* BUTTONS */
+.btn, .large-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 18px 40px;
+    font-size: 18px;
+    background: #00c9a7;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.large-btn:hover {
+    background: #00a98b;
+    transform: scale(1.1);
+}
+
+/* NAV */
+nav {
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+/* FORM */
+.form-card {
+    margin: 60px auto;
+    padding: 40px;
+    width: 350px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    animation: popup 0.4s ease;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* ANIMATIONS */
+@keyframes popup {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.slide-left {
+    animation: slideLeft 1s ease;
+}
+
+.slide-right {
+    animation: slideRight 1s ease;
+}
+
+.fade-down {
+    animation: fadeDown 1s ease;
+}
+
+.fade-up {
+    animation: fadeUp 1s ease;
+}
+
+.delay {
+    animation-delay: 0.3s;
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-80px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(80px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* LOADER */
+.loader {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+.loader::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ccc;
+    border-top: 6px solid #00c9a7;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* GAUGE */
+.gauge-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.gauge {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: conic-gradient(#00c9a7 0deg, #444 0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 1s ease;
+}
+
+.gauge-cover {
+    width: 130px;
+    height: 130px;
+    background: #0f2027;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.status-text {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.confidence {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+/* PARTICLE BACKGROUND */
+#particles-js {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+/* Risk Icon */
+.risk-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Chart */
+canvas {
+    margin: 20px 0;
+}
+
+/* Buttons inside modal */
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    background: #00c9a7;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.action-buttons button:hover {
+    transform: scale(1.1);
+    background: #009f85;
+}
+/* CENTER RESULT SECTION */
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* RESULT CARD */
+.result-card {
+    width: 600px;
+    max-width: 90%;
+    padding: 50px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    animation: fadeIn 0.6s ease;
+}
+
+/* GAUGE */
+.gauge-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.gauge-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: conic-gradient(#00c9a7 0%, #00c9a7 83%, rgba(255,255,255,0.1) 83%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 30px rgba(0,201,167,0.6);
+}
+
+/* STATUS */
+#resultStatus {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+/* CONFIDENCE */
+.confidence {
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* ACTIONS */
+.actions-section {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.actions-section ul {
+    margin-top: 15px;
+}
+
+/* BUTTONS */
+.result-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.big-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+.secondary-btn {
+    background: #444;
+}
